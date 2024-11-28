@@ -1,0 +1,79 @@
+body{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #1e1e2f;
+  color: #ffffff;
+  overflow: hidden;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(135deg, #232526, #414354);
+  animation: animateBackground 10s infinite alternate;
+}
+.orange-text{
+  color: orange;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: textAnimation 3s ease-in-out infinite alternate;
+}
+@keyframes textAnimation {
+  0% {
+    transform: translateY(30px) scale(0.95) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05) rotate(2deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0;
+  }
+}
+@keyframes fadeInup {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes animateBackground {
+  0% {
+    background: linear-gradient(135deg, #232526, #414345);
+  }
+  25% {
+    background: linear-gradient(135deg, #1a4147, #5ca4ce);
+  }
+  50% {
+    background: linear-gradient(135deg, #826a9c, #80a6e7);
+  }
+  75% {
+    background: linear-gradient(135deg, #3a4948, #465f50);
+  }
+  100% {
+    background: linear-gradient(135deg, #232526, #414345);
+  }
+}
+@keyframes textGlow {
+  0% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
